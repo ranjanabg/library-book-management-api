@@ -1,123 +1,100 @@
-# Library Management Services
+# 📚 Library Book Management API
 
-## Development Platform
+A backend RESTful service for managing library operations such as books, members, racks, transactions, overdue fees, and recommendations.  
+This service is built using a **service-oriented architecture** and supports both **librarian** and **reader** workflows, with optional RFID-based book tracking.
 
-* Backend: Java using JAX-RS framework
-* Frontend: ReactJS
+🌐 **Base URL:**  
+https://library-book-management.dustakar.com
 
-## Setup
+---
+
+## ✨ Features
+
+### Core Capabilities
+- 📖 Book management (Add, View, Update, Delete)
+- 👤 Member management (Register, Update, Cancel membership)
+- 🔄 Book circulation (Checkout, Renew, Return)
+- ⏰ Overdue fee calculation and enforcement
+- 📍 Book location tracking using Rack & RFID concepts
+- 🔔 Due-date notifications
+- 📊 Library statistics (books, members, activity)
+- ⭐ Book recommendation service using **TOPSIS + CRITIC** methodology
+
+### Role-Based Access
+- **Librarian**
+  - Manage books, members, and racks
+  - Verify misplaced books
+  - View library analytics
+- **Reader**
+  - Search and view books
+  - Checkout / Renew / Return books (PIN-based)
+  - View profile and dues
+  - Get personalized book recommendations
+
+---
+
+## 🧱 Architecture Overview
+
+- **Backend**: Java (JAX-RS – RESTful Web Services)
+- **Server**: Apache Tomcat
+- **Database**: MySQL
+- **Frontend (separate service)**: ReactJS
+
+The backend is organized into logical REST services:
+- Books Management Service
+- Members / Profile Management Service
+- Rack Management Service
+- Book Transactions Service
+- Recommendation (Composite) Service
+
+---
+
+## 🗄️ Database Schema
+
+The system uses the following core tables:
+
+- `Books`
+- `Members`
+- `Book_Transactions`
+- `Book_Current_Location`
+- `Overdue_Fees`
+- `Racks`
+
+---
+
+## ⚙️ Prerequisites (Local Development)
+
+- Java 8 or later
+- Maven 3+
+- MySQL 5.7+
+- Eclipse IDE (recommended)
+
+---
+
+## 🛠️ Setup Instructions
 
 ### Database Setup
 
-* Locate the `tcss559project.sql` file inside the workspace. Below command gives the path of this .sql file.
-
 ```bash
-find . -name "tcss559project.sql
-```
-* Using the `tcss559project.sql` create the database and tables in mysql. Below command setups this resources.
-
-```bash
-mysql -u root -p < {tcss559project.sql path} 
+find . -name "init.sql"
+mysql -u root -p < /path/to/init.sql
 ```
 
-### Service Setup
+---
 
-* Open eclipse
-* Select `Library_Management` as workspace
-* Import LibraryBooksManagement as project
+## 🔌 API Overview (Sample)
 
-## Running the service
+| Resource | Description |
+|--------|-------------|
+| `/books` | Manage books |
+| `/members` | Manage library members |
+| `/transactions` | Checkout, Renew, Return |
+| `/racks` | Rack verification & placement |
+| `/recommendations` | TOPSIS-based book suggestions |
+| `/profile` | Reader profile & dues |
 
-* Update Maven project (Alt + F5)
-* Click Google Cloud Platform button from the Eclipse toolbar and click "Run on App Engine"
+---
 
-## Directory 
+## 📄 License
 
-src
-├── main
-│   ├── java
-│   │   └── edu
-│   │       └── uw
-│   │           └── tcss559
-│   │               ├── client
-│   │               │   ├── AbstractClient.java
-│   │               │   ├── MembersClient.java
-│   │               │   └── NotificationClient.java
-│   │               ├── common
-│   │               │   ├── Calculate.java
-│   │               │   ├── Constants.java
-│   │               │   ├── Serializer.java
-│   │               │   ├── Transformer.java
-│   │               │   └── Validator.java
-│   │               ├── controllers
-│   │               │   ├── AbstractREST.java
-│   │               │   ├── AnalyticsSOAP.java
-│   │               │   ├── BookTransactionsREST.java
-│   │               │   ├── BooksREST.java
-│   │               │   ├── CorsFilter.java
-│   │               │   ├── CriticREST.java
-│   │               │   ├── HelloAppEngine.java
-│   │               │   ├── LibraryBooksManagement.java
-│   │               │   ├── MembersREST.java
-│   │               │   ├── NotificationREST.java
-│   │               │   ├── ProfileManagementREST.java
-│   │               │   ├── RackRest.java
-│   │               │   └── TopsisREST.java
-│   │               ├── mcda
-│   │               │   ├── CriticCore.java
-│   │               │   └── TopsisCore.java
-│   │               ├── store
-│   │               │   ├── AbstractMySQLStore.java
-│   │               │   ├── BookTransactionsMySQLStore.java
-│   │               │   ├── BooksMySQLStore.java
-│   │               │   ├── MembersMySQLStore.java
-│   │               │   ├── OverdueFeesMySQLStore.java
-│   │               │   └── RacksMySQLStore.java
-│   │               └── structures
-│   │                   ├── Book.java
-│   │                   ├── BookCurrentLocation.java
-│   │                   ├── BookIssueType.java
-│   │                   ├── BookStatus.java
-│   │                   ├── BooksStatistics.java
-│   │                   ├── CheckoutVerify.java
-│   │                   ├── Member.java
-│   │                   ├── MemberStatus.java
-│   │                   ├── MemberType.java
-│   │                   ├── MembersStatistics.java
-│   │                   ├── OverdueFees.java
-│   │                   ├── Profile.java
-│   │                   ├── Rack.java
-│   │                   ├── mcda
-│   │                   │   ├── Alternative.java
-│   │                   │   ├── AlternativeResult.java
-│   │                   │   ├── Attribute.java
-│   │                   │   ├── AttributesResponse.java
-│   │                   │   ├── DecisionInput.java
-│   │                   │   └── TopsisScores.java
-│   │                   └── notification
-│   │                       ├── Email.java
-│   │                       ├── EmailContent.java
-│   │                       ├── EmailDestination.java
-│   │                       └── EmailRequest.java
-│   └── webapp
-│       ├── Library\ Books\ Management\ Services.postman_collection.json
-│       ├── Library\ Books\ Management\ Services.postman_collection_backup.json
-│       ├── META-INF
-│       │   └── MANIFEST.MF
-│       ├── WEB-INF
-│       │   ├── appengine-web.xml
-│       │   ├── lib
-│       │   ├── logging.properties
-│       │   ├── sun-jaxws.xml
-│       │   └── web.xml
-│       ├── favicon.ico
-│       ├── index.html
-│       └── tcss559project.sql
-└── test
-    └── java
-        └── uw
-            └── tcss559
-                └── controllers
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT License](https://choosealicense.com/licenses/mit/)
