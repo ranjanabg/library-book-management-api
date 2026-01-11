@@ -1,5 +1,12 @@
 # 📚 Library Book Management API
 
+![Java](https://img.shields.io/badge/Java-17-blue)
+![REST](https://img.shields.io/badge/API-RESTful-blue)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-success)
+![Database](https://img.shields.io/badge/Database-MySQL-orange)
+
+![Build](https://github.com/ranjanabg/HouseFinder/actions/workflows/ci.yml/badge.svg)
+
 A backend RESTful service for managing library operations such as books, members, racks, transactions, overdue fees, and recommendations.  
 This service is built using a **service-oriented architecture** and supports both **librarian** and **reader** workflows, with optional RFID-based book tracking.
 
@@ -99,3 +106,4 @@ mysql -u root -p < /path/to/init.sql
 
 
 [MIT License](https://choosealicense.com/licenses/mit/)
+
