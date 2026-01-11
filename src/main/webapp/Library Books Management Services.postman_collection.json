@@ -1,0 +1,3358 @@
+{
+	"info": {
+		"_postman_id": "0c0d0275-e8d1-41ef-8b12-5eb892ffbfc1",
+		"name": "Library Books Management Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Books REST Service",
+			"item": [
+				{
+					"name": "Create new book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "isbn",
+								"value": "exampleISBN",
+								"type": "text"
+							},
+							{
+								"key": "rfid",
+								"value": "exampleRFID",
+								"type": "text"
+							},
+							{
+								"key": "title",
+								"value": "Example Title",
+								"type": "text"
+							},
+							{
+								"key": "description",
+								"value": "Example Description",
+								"type": "text"
+							},
+							{
+								"key": "authorName",
+								"value": "Example Author",
+								"type": "text"
+							},
+							{
+								"key": "publisherName",
+								"value": "Example Publisher",
+								"type": "text"
+							},
+							{
+								"key": "owner",
+								"value": "Example Owner",
+								"type": "text"
+							},
+							{
+								"key": "price",
+								"value": "229",
+								"type": "text"
+							},
+							{
+								"key": "pages",
+								"value": "436",
+								"type": "text"
+							},
+							{
+								"key": "readCount",
+								"value": "24",
+								"type": "text"
+							},
+							{
+								"key": "readersRating",
+								"value": "4.5",
+								"type": "text"
+							},
+							{
+								"key": "criticsRating",
+								"value": "4.8",
+								"type": "text"
+							},
+							{
+								"key": "rackId",
+								"value": "A16R27",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/book/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"book",
+								"add"
+							]
+						},
+						"description": "Creates a new book record in the Library with given details."
+					},
+					"response": [
+						{
+							"name": "Create new book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "isbn",
+										"value": "exampleISBN",
+										"type": "text"
+									},
+									{
+										"key": "rfid",
+										"value": "exampleRFID",
+										"type": "text"
+									},
+									{
+										"key": "title",
+										"value": "Example Title",
+										"type": "text"
+									},
+									{
+										"key": "description",
+										"value": "Example Description",
+										"type": "text"
+									},
+									{
+										"key": "authorName",
+										"value": "Example Author",
+										"type": "text"
+									},
+									{
+										"key": "publisherName",
+										"value": "Example Publisher",
+										"type": "text"
+									},
+									{
+										"key": "owner",
+										"value": "Example Owner",
+										"type": "text"
+									},
+									{
+										"key": "price",
+										"value": "229",
+										"type": "text"
+									},
+									{
+										"key": "pages",
+										"value": "436",
+										"type": "text"
+									},
+									{
+										"key": "readCount",
+										"value": "24",
+										"type": "text"
+									},
+									{
+										"key": "readersRating",
+										"value": "4.5",
+										"type": "text"
+									},
+									{
+										"key": "criticsRating",
+										"value": "4.8",
+										"type": "text"
+									},
+									{
+										"key": "rackId",
+										"value": "A16R27",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/book/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"book",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Dec 2021 21:26:43 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "List all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/book/read",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"book",
+								"read"
+							]
+						},
+						"description": "Gets the details of all the books that are registered with the Library."
+					},
+					"response": [
+						{
+							"name": "List all books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/book/read",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"book",
+										"read"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 02:35:40 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2436"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"isbn\": \"book1ISBN\",\n        \"rfid\": \"book1RFID\",\n        \"title\": \"book1Title\",\n        \"description\": \"book1Description\",\n        \"authorName\": \"book1Author\",\n        \"publisherName\": \"book1Publisher\",\n        \"owner\": \"book1Owner\",\n        \"price\": 100,\n        \"pages\": 220,\n        \"readCount\": 10,\n        \"readersRating\": 4.5,\n        \"criticsRating\": 3.5,\n        \"maxIssueDays\": 30,\n        \"rackId\": \"B22R61\",\n        \"noOfTimesRenewed\": 0\n    },\n    {\n        \"id\": 2,\n        \"isbn\": \"book2ISBN\",\n        \"rfid\": \"book2RFID\",\n        \"title\": \"book2Title\",\n        \"description\": \"book2Description\",\n        \"authorName\": \"book2Author\",\n        \"publisherName\": \"book2Publisher\",\n        \"owner\": \"book2Owner\",\n        \"price\": 180,\n        \"pages\": 250,\n        \"readCount\": 25,\n        \"readersRating\": 1.6,\n        \"criticsRating\": 1.5,\n        \"maxIssueDays\": 30,\n        \"rackId\": \"B22R63\",\n        \"noOfTimesRenewed\": 0\n    },\n    {\n        \"id\": 3,\n        \"isbn\": \"book3ISBN\",\n        \"rfid\": \"book3RFID\",\n        \"title\": \"book3Title\",\n        \"description\": \"book3Description\",\n        \"authorName\": \"book3Author\",\n        \"publisherName\": \"book3Publisher\",\n        \"owner\": \"book3Owner\",\n        \"price\": 214.99,\n        \"pages\": 300,\n        \"readCount\": 17,\n        \"readersRating\": 3.9,\n        \"criticsRating\": 2.6,\n        \"maxIssueDays\": 30,\n        \"rackId\": \"B22R52\",\n        \"noOfTimesRenewed\": 0\n    },\n    {\n        \"id\": 4,\n        \"isbn\": \"book4ISBN\",\n        \"rfid\": \"book4RFID\",\n        \"title\": \"book4Title\",\n        \"description\": \"book4Description\",\n        \"authorName\": \"book4Author\",\n        \"publisherName\": \"book4Publisher\",\n        \"owner\": \"book4Owner\",\n        \"price\": 349.99,\n        \"pages\": 196,\n        \"readCount\": 38,\n        \"readersRating\": 4.2,\n        \"criticsRating\": 4.5,\n        \"maxIssueDays\": 30,\n        \"rackId\": \"B22R07\",\n        \"noOfTimesRenewed\": 0\n    },\n    {\n        \"id\": 5,\n        \"isbn\": \"book5ISBN\",\n        \"rfid\": \"book5RFID\",\n        \"title\": \"book5Title\",\n        \"description\": \"book5Description\",\n        \"authorName\": \"book5Author\",\n        \"publisherName\": \"book5Publisher\",\n        \"owner\": \"book5Owner\",\n        \"price\": 263.99,\n        \"pages\": 270,\n        \"readCount\": 20,\n        \"readersRating\": 3.3,\n        \"criticsRating\": 1.6,\n        \"maxIssueDays\": 30,\n        \"rackId\": \"B22R29\",\n        \"noOfTimesRenewed\": 0\n    },\n    {\n        \"id\": 6,\n        \"isbn\": \"exampleISBN\",\n        \"rfid\": \"exampleRFID\",\n        \"title\": \"Example Title\",\n        \"description\": \"Example Description\",\n        \"authorName\": \"Example Author\",\n        \"publisherName\": \"Example Publisher\",\n        \"owner\": \"Example Owner\",\n        \"price\": 229,\n        \"pages\": 436,\n        \"readCount\": 24,\n        \"readersRating\": 4.5,\n        \"criticsRating\": 4.8,\n        \"maxIssueDays\": 30,\n        \"rackId\": \"A16R27\",\n        \"noOfTimesRenewed\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Retrieve specific book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/book/read/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"book",
+								"read",
+								"2"
+							]
+						},
+						"description": "Gets the details of the specific book from the library based on given bookId."
+					},
+					"response": [
+						{
+							"name": "Retrieve specific book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/book/read/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"book",
+										"read",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Dec 2021 02:04:50 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "374"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"isbn\": \"book2ISBN\",\n    \"rfid\": \"book2RFID\",\n    \"title\": \"book2Title\",\n    \"description\": \"book2Description\",\n    \"authorName\": \"book2Author\",\n    \"publisherName\": \"book2Publisher\",\n    \"owner\": \"book2Owner\",\n    \"price\": 180,\n    \"pages\": 250,\n    \"readCount\": 25,\n    \"readersRating\": 1.6,\n    \"criticsRating\": 1.5,\n    \"maxIssueDays\": 30,\n    \"rackId\": \"B22R63\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update specific book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "price",
+								"value": "199",
+								"type": "text"
+							},
+							{
+								"key": "reader",
+								"value": "4.4",
+								"type": "text"
+							},
+							{
+								"key": "maxIssueDays",
+								"value": "60",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/book/update/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"book",
+								"update",
+								"6"
+							]
+						},
+						"description": "Updates the specific given book in the Library with the provided details."
+					},
+					"response": [
+						{
+							"name": "Update specific book",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "price",
+										"value": "199",
+										"type": "text"
+									},
+									{
+										"key": "reader",
+										"value": "4.4",
+										"type": "text"
+									},
+									{
+										"key": "maxIssueDays",
+										"value": "60",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/book/update/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"book",
+										"update",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Dec 2021 02:05:45 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete specific book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/book/delete/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"book",
+								"delete",
+								"6"
+							]
+						},
+						"description": "Deletes the book details of given book Id from the Library."
+					},
+					"response": [
+						{
+							"name": "Delete specific book",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/book/delete/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"book",
+										"delete",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Dec 2021 21:27:30 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete all books",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/book/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"book",
+								"delete"
+							]
+						},
+						"description": "Deletes all the books details from the Library."
+					},
+					"response": [
+						{
+							"name": "Delete all the books",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/book/delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"book",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Dec 2021 07:42:35 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"description": "REST service responsible for performing CRUD operations on Books store."
+		},
+		{
+			"name": "Members REST Service",
+			"item": [
+				{
+					"name": "Create member",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "rfid",
+								"value": "M42B61",
+								"type": "text"
+							},
+							{
+								"key": "firstName",
+								"value": "Ranjana",
+								"type": "text"
+							},
+							{
+								"key": "lastName",
+								"value": "Bongale Ganesh",
+								"type": "text"
+							},
+							{
+								"key": "emailId",
+								"value": "ranjanabg.ranj@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "testPassword",
+								"type": "text"
+							},
+							{
+								"key": "mobileNo",
+								"value": "4254108532",
+								"type": "text"
+							},
+							{
+								"key": "dateOfBirth",
+								"value": "09/15/2000",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "READER",
+								"type": "text"
+							},
+							{
+								"key": "status",
+								"value": "ACTIVE",
+								"type": "text"
+							},
+							{
+								"key": "uniquePin",
+								"value": "54321",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/member/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"member",
+								"add"
+							]
+						},
+						"description": "Creates a new member record in the library with given details."
+					},
+					"response": [
+						{
+							"name": "Create member",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "rfid",
+										"value": "M42B61",
+										"type": "text"
+									},
+									{
+										"key": "firstName",
+										"value": "Ranjana",
+										"type": "text"
+									},
+									{
+										"key": "lastName",
+										"value": "Bongale Ganesh",
+										"type": "text"
+									},
+									{
+										"key": "emailId",
+										"value": "ranjanabg.ranj@gmail.com",
+										"type": "text"
+									},
+									{
+										"key": "password",
+										"value": "testPassword",
+										"type": "text"
+									},
+									{
+										"key": "mobileNo",
+										"value": "4254108532",
+										"type": "text"
+									},
+									{
+										"key": "dateOfBirth",
+										"value": "09/15/2000",
+										"type": "text"
+									},
+									{
+										"key": "type",
+										"value": "READER",
+										"type": "text"
+									},
+									{
+										"key": "status",
+										"value": "ACTIVE",
+										"type": "text"
+									},
+									{
+										"key": "uniquePin",
+										"value": "54321",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/member/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"member",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 03:53:33 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "368"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"rfid\": \"M42B61\",\n    \"firstName\": \"Ranjana\",\n    \"lastName\": \"Bongale Ganesh\",\n    \"emailId\": \"ranjanabg.ranj@gmail.com\",\n    \"password\": \"testPassword\",\n    \"mobileNo\": \"4254108532\",\n    \"dateOfBirth\": 969001200000,\n    \"type\": \"READER\",\n    \"status\": \"ACTIVE\",\n    \"createdOn\": 1639108413644,\n    \"uniquePin\": 54321,\n    \"booksIssued\": 0,\n    \"booksLimit\": 7\n}"
+						}
+					]
+				},
+				{
+					"name": "List all members",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/member/read",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"member",
+								"read"
+							]
+						},
+						"description": "Gets the details of all the members who are registered with the library."
+					},
+					"response": [
+						{
+							"name": "List all members",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/member/read",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"member",
+										"read"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Dec 2021 02:08:25 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1420"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"rfid\": \"M15A1K\",\n        \"firstName\": \"Adam\",\n        \"lastName\": \"Lawrence\",\n        \"emailId\": \"adam.lawrence@gmail.com\",\n        \"password\": \"adam@123\",\n        \"mobileNo\": \"4234109932\",\n        \"dateOfBirth\": 621241200000,\n        \"type\": \"READER\",\n        \"status\": \"ACTIVE\",\n        \"createdOn\": 957164400000,\n        \"uniquePin\": 12345,\n        \"booksIssued\": 0,\n        \"booksLimit\": 5\n    },\n    {\n        \"id\": 2,\n        \"rfid\": \"M22C4Q\",\n        \"firstName\": \"Eve\",\n        \"lastName\": \"Lawrence\",\n        \"emailId\": \"eve.lawrence@gmail.com\",\n        \"password\": \"eve@321\",\n        \"mobileNo\": \"4234109931\",\n        \"dateOfBirth\": 623228400000,\n        \"type\": \"READER\",\n        \"status\": \"ACTIVE\",\n        \"createdOn\": 1593586800000,\n        \"uniquePin\": 23456,\n        \"booksIssued\": 0,\n        \"booksLimit\": 5\n    },\n    {\n        \"id\": 3,\n        \"rfid\": \"M12B1L\",\n        \"firstName\": \"Ben\",\n        \"lastName\": \"Nyugen\",\n        \"emailId\": \"ben.nyugen@gmail.com\",\n        \"password\": \"nyugen9881\",\n        \"mobileNo\": \"4238764932\",\n        \"dateOfBirth\": 690192000000,\n        \"type\": \"ADMIN\",\n        \"status\": \"ACTIVE\",\n        \"createdOn\": 1470034800000,\n        \"uniquePin\": 34567,\n        \"booksIssued\": 0,\n        \"booksLimit\": 5\n    },\n    {\n        \"id\": 4,\n        \"rfid\": \"M31A2Y\",\n        \"firstName\": \"Vanessa\",\n        \"lastName\": \"Patel\",\n        \"emailId\": \"vanessa@gmail.com\",\n        \"password\": \"vanessa63@0001#\",\n        \"mobileNo\": \"4267542765\",\n        \"dateOfBirth\": 29491200000,\n        \"type\": \"LIBRARIAN\",\n        \"status\": \"ACTIVE\",\n        \"createdOn\": 1525158000000,\n        \"uniquePin\": 45678,\n        \"booksIssued\": 0,\n        \"booksLimit\": 5\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Retrieve specific member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/member/read/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"member",
+								"read",
+								"5"
+							]
+						},
+						"description": "Gets the details of the specific member based on the given memberId."
+					},
+					"response": [
+						{
+							"name": "Retrieve specific member",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/member/read/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"member",
+										"read",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Dec 2021 02:08:40 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "351"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"rfid\": \"M22C4Q\",\n    \"firstName\": \"Eve\",\n    \"lastName\": \"Lawrence\",\n    \"emailId\": \"eve.lawrence@gmail.com\",\n    \"password\": \"eve@321\",\n    \"mobileNo\": \"4234109931\",\n    \"dateOfBirth\": 623228400000,\n    \"type\": \"READER\",\n    \"status\": \"ACTIVE\",\n    \"createdOn\": 1593586800000,\n    \"uniquePin\": 23456,\n    \"booksIssued\": 0,\n    \"booksLimit\": 5\n}"
+						}
+					]
+				},
+				{
+					"name": "Update specific member",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "uniquePin",
+								"value": "12045",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/member/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"member",
+								"update",
+								"4"
+							]
+						},
+						"description": "Updates the specific member with the provided details."
+					},
+					"response": [
+						{
+							"name": "Update specific member",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "uniquePin",
+										"value": "12045",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/member/update/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"member",
+										"update",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Dec 2021 02:15:56 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete specific member",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/member/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"member",
+								"delete",
+								"2"
+							]
+						},
+						"description": "Deletes the member details of given memberId from the library."
+					},
+					"response": [
+						{
+							"name": "Delete specific member",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/member/delete/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"member",
+										"delete",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Dec 2021 21:43:32 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete all members",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/member/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"member",
+								"delete"
+							]
+						},
+						"description": "Deletes all the members details from the Library."
+					},
+					"response": [
+						{
+							"name": "Delete all members",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/member/delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"member",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Dec 2021 21:43:44 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"description": "REST service responsible for performing CRUD operations on Members store."
+		},
+		{
+			"name": "CRITIC REST Service",
+			"item": [
+				{
+					"name": "Calculate attribute weights",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "book_ids",
+								"value": "1,2,3,4,5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/critic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"critic"
+							]
+						},
+						"description": "Gets the weights of all the attributes (price, pages, readCount, readersRating, criticsRating) estimated using CRITIC method."
+					},
+					"response": [
+						{
+							"name": "Calculate attribute weights",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "book_ids",
+										"value": "1,2,3,4,5",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/critic",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"critic"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Dec 2021 21:38:51 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "361"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"attributes\": [\n        {\n            \"name\": \"price\",\n            \"weight\": 0.15516336762280816\n        },\n        {\n            \"name\": \"pages\",\n            \"weight\": 0.2858194150057148\n        },\n        {\n            \"name\": \"readCount\",\n            \"weight\": 0.1724356089274873\n        },\n        {\n            \"name\": \"readersRating\",\n            \"weight\": 0.19901962819384314\n        },\n        {\n            \"name\": \"criticsRating\",\n            \"weight\": 0.18756198025014661\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Specific attribute weight",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "book_ids",
+								"value": "1,2,3,4,5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/critic/price",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"critic",
+								"price"
+							]
+						},
+						"description": "Gets the specified attribute weight that is estimated using CRITIC method."
+					},
+					"response": [
+						{
+							"name": "Specific attribute weight",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "book_ids",
+										"value": "1,2,3,4,5",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/critic/price",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"critic",
+										"price"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Dec 2021 21:39:01 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "87"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"attributes\": [\n        {\n            \"name\": \"price\",\n            \"weight\": 0.15516336762280816\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Computes the weights of attributes (price, pages, readCount, readersRating, criticsRating) using CRITIC method."
+		},
+		{
+			"name": "TOPSIS REST Service",
+			"item": [
+				{
+					"name": "Calculate TOPSIS scores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "book_ids",
+								"value": "1,2,3,4,5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/topsis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"topsis"
+							]
+						},
+						"description": "Gets the TOPSIS performance scores for the given books using CRITIC method to estimate weights of all the attributes(price, pages, readCount, readersRating, criticsRating)"
+					},
+					"response": [
+						{
+							"name": "Calculate TOPSIS scores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "book_ids",
+										"value": "1,2,3,4,5",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/topsis",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"topsis"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Dec 2021 02:16:53 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2951"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"avgPerformanceScore\": 0.5349025215774128,\n    \"standardDeviation\": 0.13290143389302211,\n    \"alternativeResults\": [\n        {\n            \"book\": {\n                \"id\": 2,\n                \"isbn\": \"book2ISBN\",\n                \"rfid\": \"book2RFID\",\n                \"title\": \"1984, by George Orwell\",\n                \"description\": \"Delve into the life of Winston Smith\",\n                \"authorName\": \"book2Author\",\n                \"publisherName\": \"book2Publisher\",\n                \"owner\": \"book2Owner\",\n                \"price\": 180,\n                \"pages\": 250,\n                \"readCount\": 25,\n                \"readersRating\": 1.6,\n                \"criticsRating\": 1.5,\n                \"rackId\": \"B22R63\",\n                \"noOfTimesRenewed\": 0\n            },\n            \"score\": 0.6727875054737641,\n            \"ranking\": 1\n        },\n        {\n            \"book\": {\n                \"id\": 5,\n                \"isbn\": \"book5ISBN\",\n                \"rfid\": \"book5RFID\",\n                \"title\": \"The Great Gatsby\",\n                \"description\": \"The Great Gatsby explores the decadence of the Jazz Age\",\n                \"authorName\": \"F. Scott Fitzgerald\",\n                \"publisherName\": \"book5Publisher\",\n                \"owner\": \"book5Owner\",\n                \"price\": 263.99,\n                \"pages\": 270,\n                \"readCount\": 20,\n                \"readersRating\": 3.3,\n                \"criticsRating\": 1.6,\n                \"rackId\": \"B22R29\",\n                \"noOfTimesRenewed\": 0\n            },\n            \"score\": 0.5993653452394527,\n            \"ranking\": 2\n        },\n        {\n            \"book\": {\n                \"id\": 1,\n                \"isbn\": \"book1ISBN\",\n                \"rfid\": \"book1RFID\",\n                \"title\": \"Title 7\",\n                \"description\": \"Story on mocking bird\",\n                \"authorName\": \"Harper Lee\",\n                \"publisherName\": \"book1Publisher\",\n                \"owner\": \"book1Owner\",\n                \"price\": 100,\n                \"pages\": 220,\n                \"readCount\": 10,\n                \"readersRating\": 4.5,\n                \"criticsRating\": 3.5,\n                \"rackId\": \"B22R61\",\n                \"noOfTimesRenewed\": 0\n            },\n            \"score\": 0.5893446866240091,\n            \"ranking\": 3\n        },\n        {\n            \"book\": {\n                \"id\": 3,\n                \"isbn\": \"book3ISBN\",\n                \"rfid\": \"book3RFID\",\n                \"title\": \"Harry Potter and the Philosopher’s Stone\",\n                \"description\": \"Harry Potter Series\",\n                \"authorName\": \"J.K. Rowling\",\n                \"publisherName\": \"book3Publisher\",\n                \"owner\": \"book3Owner\",\n                \"price\": 214.99,\n                \"pages\": 300,\n                \"readCount\": 17,\n                \"readersRating\": 3.9,\n                \"criticsRating\": 2.6,\n                \"rackId\": \"B22R52\",\n                \"noOfTimesRenewed\": 0\n            },\n            \"score\": 0.5273622763596827,\n            \"ranking\": 4\n        },\n        {\n            \"book\": {\n                \"id\": 4,\n                \"isbn\": \"book4ISBN\",\n                \"rfid\": \"book4RFID\",\n                \"title\": \"The Lord of the Rings\",\n                \"description\": \"Story of Lord of the Rings\",\n                \"authorName\": \"J.R.R. Tolkien\",\n                \"publisherName\": \"book4Publisher\",\n                \"owner\": \"book4Owner\",\n                \"price\": 349.99,\n                \"pages\": 196,\n                \"readCount\": 38,\n                \"readersRating\": 4.2,\n                \"criticsRating\": 4.5,\n                \"rackId\": \"B22R07\",\n                \"noOfTimesRenewed\": 0\n            },\n            \"score\": 0.28565279419015566,\n            \"ranking\": 5\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Calculate TOPSIS score of specific book",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "book_ids",
+								"value": "1,2,3,4,5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/topsis/book3Title",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"topsis",
+								"book3Title"
+							]
+						},
+						"description": "Gets the TOPSIS performance score for the specified book across all the given books using CRITIC method to estimate weights of all the attributes(price, pages, readCount, readersRating, criticsRating)."
+					},
+					"response": [
+						{
+							"name": "Calculate TOPSIS score of specific book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "book_ids",
+										"value": "1,2,3,4,5",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/topsis",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"topsis"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Dec 2021 02:17:21 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2951"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"avgPerformanceScore\": 0.5349025215774128,\n    \"standardDeviation\": 0.13290143389302211,\n    \"alternativeResults\": [\n        {\n            \"book\": {\n                \"id\": 2,\n                \"isbn\": \"book2ISBN\",\n                \"rfid\": \"book2RFID\",\n                \"title\": \"1984, by George Orwell\",\n                \"description\": \"Delve into the life of Winston Smith\",\n                \"authorName\": \"book2Author\",\n                \"publisherName\": \"book2Publisher\",\n                \"owner\": \"book2Owner\",\n                \"price\": 180,\n                \"pages\": 250,\n                \"readCount\": 25,\n                \"readersRating\": 1.6,\n                \"criticsRating\": 1.5,\n                \"rackId\": \"B22R63\",\n                \"noOfTimesRenewed\": 0\n            },\n            \"score\": 0.6727875054737641,\n            \"ranking\": 1\n        },\n        {\n            \"book\": {\n                \"id\": 5,\n                \"isbn\": \"book5ISBN\",\n                \"rfid\": \"book5RFID\",\n                \"title\": \"The Great Gatsby\",\n                \"description\": \"The Great Gatsby explores the decadence of the Jazz Age\",\n                \"authorName\": \"F. Scott Fitzgerald\",\n                \"publisherName\": \"book5Publisher\",\n                \"owner\": \"book5Owner\",\n                \"price\": 263.99,\n                \"pages\": 270,\n                \"readCount\": 20,\n                \"readersRating\": 3.3,\n                \"criticsRating\": 1.6,\n                \"rackId\": \"B22R29\",\n                \"noOfTimesRenewed\": 0\n            },\n            \"score\": 0.5993653452394527,\n            \"ranking\": 2\n        },\n        {\n            \"book\": {\n                \"id\": 1,\n                \"isbn\": \"book1ISBN\",\n                \"rfid\": \"book1RFID\",\n                \"title\": \"Title 7\",\n                \"description\": \"Story on mocking bird\",\n                \"authorName\": \"Harper Lee\",\n                \"publisherName\": \"book1Publisher\",\n                \"owner\": \"book1Owner\",\n                \"price\": 100,\n                \"pages\": 220,\n                \"readCount\": 10,\n                \"readersRating\": 4.5,\n                \"criticsRating\": 3.5,\n                \"rackId\": \"B22R61\",\n                \"noOfTimesRenewed\": 0\n            },\n            \"score\": 0.5893446866240091,\n            \"ranking\": 3\n        },\n        {\n            \"book\": {\n                \"id\": 3,\n                \"isbn\": \"book3ISBN\",\n                \"rfid\": \"book3RFID\",\n                \"title\": \"Harry Potter and the Philosopher’s Stone\",\n                \"description\": \"Harry Potter Series\",\n                \"authorName\": \"J.K. Rowling\",\n                \"publisherName\": \"book3Publisher\",\n                \"owner\": \"book3Owner\",\n                \"price\": 214.99,\n                \"pages\": 300,\n                \"readCount\": 17,\n                \"readersRating\": 3.9,\n                \"criticsRating\": 2.6,\n                \"rackId\": \"B22R52\",\n                \"noOfTimesRenewed\": 0\n            },\n            \"score\": 0.5273622763596827,\n            \"ranking\": 4\n        },\n        {\n            \"book\": {\n                \"id\": 4,\n                \"isbn\": \"book4ISBN\",\n                \"rfid\": \"book4RFID\",\n                \"title\": \"The Lord of the Rings\",\n                \"description\": \"Story of Lord of the Rings\",\n                \"authorName\": \"J.R.R. Tolkien\",\n                \"publisherName\": \"book4Publisher\",\n                \"owner\": \"book4Owner\",\n                \"price\": 349.99,\n                \"pages\": 196,\n                \"readCount\": 38,\n                \"readersRating\": 4.2,\n                \"criticsRating\": 4.5,\n                \"rackId\": \"B22R07\",\n                \"noOfTimesRenewed\": 0\n            },\n            \"score\": 0.28565279419015566,\n            \"ranking\": 5\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Computes the TOPSIS performance scores using the CRITIC weights for the given books."
+		},
+		{
+			"name": "Notification REST Service",
+			"item": [
+				{
+					"name": "Notifiy Admins",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "subject",
+								"value": "Test Subject",
+								"type": "text"
+							},
+							{
+								"key": "message",
+								"value": "Test Message for the Admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/notification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notification"
+							]
+						},
+						"description": "Sends the the notification to all the administrators with given subject and message."
+					},
+					"response": [
+						{
+							"name": "Notifiy Admins",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "subject",
+										"value": "Test Subject",
+										"type": "text"
+									},
+									{
+										"key": "message",
+										"value": "Test Message",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/notification",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"notification"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 02:38:45 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Notify specific member",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "subject",
+								"value": "Test Subject",
+								"type": "text"
+							},
+							{
+								"key": "message",
+								"value": "Test Message for the Reader",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/notification/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notification",
+								"3"
+							]
+						},
+						"description": "Sends the the notification to given member Id with provided subject and message."
+					},
+					"response": [
+						{
+							"name": "Notify specific member",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "subject",
+										"value": "Test Subject",
+										"type": "text"
+									},
+									{
+										"key": "message",
+										"value": "Test Message for the Reader",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/notification/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"notification",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 02:40:01 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"description": "Handles sending the notifications to given email address with provided subjects and messages."
+		},
+		{
+			"name": "Profile Management REST Service",
+			"item": [
+				{
+					"name": "Register Member",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "rfid",
+								"value": "M42B61",
+								"type": "text"
+							},
+							{
+								"key": "firstName",
+								"value": "Ranjana",
+								"type": "text"
+							},
+							{
+								"key": "lastName",
+								"value": "Bongale Ganesh",
+								"type": "text"
+							},
+							{
+								"key": "emailId",
+								"value": "ranjanabg.ranj@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "testPassword",
+								"type": "text"
+							},
+							{
+								"key": "mobileNo",
+								"value": "4254108532",
+								"type": "text"
+							},
+							{
+								"key": "dateOfBirth",
+								"value": "09/15/2000",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "READER",
+								"type": "text"
+							},
+							{
+								"key": "uniquePin",
+								"value": "54321",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/profile/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"profile",
+								"register"
+							]
+						},
+						"description": "Registers a member with provided basic details and with ACTIVE status. Lastly, sends a successful registration notification to member."
+					},
+					"response": [
+						{
+							"name": "Register Member",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "rfid",
+										"value": "M42B61",
+										"type": "text"
+									},
+									{
+										"key": "firstName",
+										"value": "Ranjana",
+										"type": "text"
+									},
+									{
+										"key": "lastName",
+										"value": "Bongale Ganesh",
+										"type": "text"
+									},
+									{
+										"key": "emailId",
+										"value": "ranjanabg.ranj@gmail.com",
+										"type": "text"
+									},
+									{
+										"key": "password",
+										"value": "testPassword",
+										"type": "text"
+									},
+									{
+										"key": "mobileNo",
+										"value": "4254108532",
+										"type": "text"
+									},
+									{
+										"key": "dateOfBirth",
+										"value": "09/15/2000",
+										"type": "text"
+									},
+									{
+										"key": "type",
+										"value": "READER",
+										"type": "text"
+									},
+									{
+										"key": "uniquePin",
+										"value": "54321",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/profile/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"profile",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 03:59:53 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "View Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/profile/view/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"profile",
+								"view",
+								"3"
+							]
+						},
+						"description": "Views the profile of given memberId."
+					},
+					"response": [
+						{
+							"name": "View Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/profile/view/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"profile",
+										"view",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 03:53:05 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2053"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"memberDetails\": {\n        \"id\": 3,\n        \"rfid\": \"M12B1L\",\n        \"firstName\": \"RanjanaR3\",\n        \"lastName\": \"BG\",\n        \"emailId\": \"ranjanabg.ranj@gmail.com\",\n        \"password\": \"nyugen9881\",\n        \"mobileNo\": \"4238764932\",\n        \"dateOfBirth\": 690192000000,\n        \"type\": \"READER\",\n        \"status\": \"ACTIVE\",\n        \"createdOn\": 1470034800000,\n        \"uniquePin\": 34567,\n        \"booksIssued\": 3,\n        \"booksLimit\": 5\n    },\n    \"booksCheckedOut\": [\n        {\n            \"id\": 2,\n            \"isbn\": \"book2ISBN\",\n            \"rfid\": \"book2RFID\",\n            \"title\": \"book2Title\",\n            \"description\": \"book2Description\",\n            \"authorName\": \"book2Author\",\n            \"publisherName\": \"book2Publisher\",\n            \"owner\": \"book2Owner\",\n            \"price\": 180,\n            \"pages\": 250,\n            \"readCount\": 25,\n            \"readersRating\": 1.6,\n            \"criticsRating\": 1.5,\n            \"maxIssueDays\": 30,\n            \"rackId\": \"B22R63\",\n            \"issuedDate\": 1636963200000,\n            \"dueDate\": 1639555200000,\n            \"noOfTimesRenewed\": 0\n        },\n        {\n            \"id\": 3,\n            \"isbn\": \"book3ISBN\",\n            \"rfid\": \"book3RFID\",\n            \"title\": \"book3Title\",\n            \"description\": \"book3Description\",\n            \"authorName\": \"book3Author\",\n            \"publisherName\": \"book3Publisher\",\n            \"owner\": \"book3Owner\",\n            \"price\": 214.99,\n            \"pages\": 300,\n            \"readCount\": 17,\n            \"readersRating\": 3.9,\n            \"criticsRating\": 2.6,\n            \"maxIssueDays\": 30,\n            \"rackId\": \"B22R52\",\n            \"issuedDate\": 1636963200000,\n            \"dueDate\": 1639555200000,\n            \"noOfTimesRenewed\": 0\n        },\n        {\n            \"id\": 4,\n            \"isbn\": \"book4ISBN\",\n            \"rfid\": \"book4RFID\",\n            \"title\": \"book4Title\",\n            \"description\": \"book4Description\",\n            \"authorName\": \"book4Author\",\n            \"publisherName\": \"book4Publisher\",\n            \"owner\": \"book4Owner\",\n            \"price\": 349.99,\n            \"pages\": 196,\n            \"readCount\": 38,\n            \"readersRating\": 4.2,\n            \"criticsRating\": 4.5,\n            \"maxIssueDays\": 30,\n            \"rackId\": \"B22R07\",\n            \"issuedDate\": 1636963200000,\n            \"dueDate\": 1639555200000,\n            \"noOfTimesRenewed\": 0\n        }\n    ],\n    \"overdueFees\": {\n        \"memberID\": 3,\n        \"bookID\": 5,\n        \"amountDue\": 2.99,\n        \"amountPaid\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Change books limit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "new_limit",
+								"value": "20",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/profile/limit/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"profile",
+								"limit",
+								"7"
+							]
+						},
+						"description": "Increases or decreases the max books a member can borrow and notifies the member about new limit. Can only be run by Librarian/Admin."
+					},
+					"response": [
+						{
+							"name": "Change books limit",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "new_limit",
+										"value": "20",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/profile/limit/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"profile",
+										"limit",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 04:00:31 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Cancel Membership",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/profile/cancel/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"profile",
+								"cancel",
+								"7"
+							]
+						},
+						"description": "Cancels the membership of given memberId along with sending notification."
+					},
+					"response": [
+						{
+							"name": "Cancel Membership",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/profile/cancel/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"profile",
+										"cancel",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 04:01:43 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Pay the pending dues",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cardNumber",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "expiryDate",
+									"value": "2022/10/12",
+									"type": "text"
+								},
+								{
+									"key": "amountDue",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/profile/payDues/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"profile",
+								"payDues",
+								"1"
+							]
+						},
+						"description": "http://localhost:8080/api/profile/payDues/{memberId}\n\nThis REST service is used to pay the accumulated dues by the member."
+					},
+					"response": [
+						{
+							"name": "Response Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "bookRfID",
+											"value": "book1RFID",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "memberRfID",
+											"value": "M15A1K",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "pin",
+											"value": "123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "cardNumber",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "expiryDate",
+											"value": "2022/10/12",
+											"type": "text"
+										},
+										{
+											"key": "amountDue",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/profile/payDues/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"profile",
+										"payDues",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 08:35:45 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"true\"\n}"
+						}
+					]
+				}
+			],
+			"description": "A Composite service that manages the profiles registrations, cancellations, limit increases, viewing and paying dues along with sending notifications."
+		},
+		{
+			"name": "Books Transactions REST Service",
+			"item": [
+				{
+					"name": "Checkout a New Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "userRole",
+								"value": "READER",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "memberRfID",
+									"value": "M15A1K",
+									"type": "text"
+								},
+								{
+									"key": "pin",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/book/transaction/checkout/book1RFID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"book",
+								"transaction",
+								"checkout",
+								"book1RFID"
+							]
+						},
+						"description": "http://localhost:8080/api/book/transaction/checkout/{bookRfId}\n\nThis Service performs the checkout process of a book, given the bookRfID and memberRfID"
+					},
+					"response": [
+						{
+							"name": "Failed Response Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "userRole",
+										"value": "READER",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "bookRfID",
+											"value": "book1RFID",
+											"type": "text"
+										},
+										{
+											"key": "memberRfID",
+											"value": "M15A1K",
+											"type": "text"
+										},
+										{
+											"key": "pin",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/book/transaction/checkout/book1RFID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"book",
+										"transaction",
+										"checkout",
+										"book1RFID"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 03:47:33 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Please clear the dues before checking out any additional books\",\n    \"status\": \"false\"\n}"
+						},
+						{
+							"name": "Success Response Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "userRole",
+										"value": "READER",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "bookRfID",
+											"value": "book1RFID",
+											"type": "text"
+										},
+										{
+											"key": "memberRfID",
+											"value": "M15A1K",
+											"type": "text"
+										},
+										{
+											"key": "pin",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/book/transaction/checkout/book1RFID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"book",
+										"transaction",
+										"checkout",
+										"book1RFID"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 08:31:16 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"true\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Return a checked-out book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/book/transaction/return/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"book",
+								"transaction",
+								"return",
+								"1"
+							]
+						},
+						"description": "http://localhost:8080/api/book/transaction/return/{bookRfId}\n\nThis service completes the return request of the book given a bookRfID as the input. It ensures the book is already checked out by the user and calculates the fine if user returns the book post the due date."
+					},
+					"response": [
+						{
+							"name": "Failed Response Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/book/transaction/return/book1RFID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"book",
+										"transaction",
+										"return",
+										"book1RFID"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 02:32:14 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "116"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Return date exceeds the due date, please pay your dues inorder to checkout any new book\",\n    \"status\": \"false\"\n}"
+						},
+						{
+							"name": "Success Response Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/book/transaction/return/book1RFID",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"book",
+										"transaction",
+										"return",
+										"book1RFID"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 08:31:27 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"true\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Renew a checked-out book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/book/transaction/renew/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"book",
+								"transaction",
+								"renew",
+								"1"
+							]
+						},
+						"description": "http://localhost:8080/api/book/transaction/renew/{bookRfID}\n\nThis Rest API renews a checked-out book given bookRfID as the input. It ensures user doesn't have any accumulated dues and that the book is eligible to be renewed by the user."
+					},
+					"response": [
+						{
+							"name": "Failed Response Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/book/transaction/renew/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"book",
+										"transaction",
+										"renew",
+										"1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Dec 2021 01:39:24 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "79"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"The book has to be checked out inorder to renew it\",\n    \"status\": \"false\"\n}"
+						}
+					]
+				}
+			],
+			"description": "A composite service that handles all the book transactions."
+		},
+		{
+			"name": "Rack REST Service",
+			"item": [
+				{
+					"name": "Verify the location of all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/racks/verify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"racks",
+								"verify"
+							]
+						},
+						"description": "This REST service verifies the location of all books kept at all racks and sends a notification to the librarian with misplaced/incorrectly placed books."
+					},
+					"response": [
+						{
+							"name": "Response Eaxmple",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/racks/verify",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"racks",
+										"verify"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Dec 2021 01:40:17 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"true\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Verify a particular book position",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/racks/verify/B22R61/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"racks",
+								"verify",
+								"B22R61",
+								"1"
+							]
+						},
+						"description": "http://localhost:8080/api/racks/verify/{rackId}/{bookID}\n\nWhen the user/librarian attempts to place a book at a particular rack, this API responds if the selected rack position is the correct position for given book."
+					},
+					"response": [
+						{
+							"name": "Response Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/racks/verify/B22R61/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"racks",
+										"verify",
+										"B22R61",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Dec 2021 01:41:33 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"true\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Detect Book-Rack Correct Location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/racks/verify/B22R61",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"racks",
+								"verify",
+								"B22R61"
+							]
+						},
+						"description": "http://localhost:8080/api/racks/verify/{rackId}\n\nThis REST service verifies the location of all books kept at a particular rack and sends a notification to the librarian with misplaced/incorrectly placed books."
+					},
+					"response": [
+						{
+							"name": "Response Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/racks/verify/B22R61",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"racks",
+										"verify",
+										"B22R61"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 06:52:52 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"true\"\n}"
+						}
+					]
+				}
+			],
+			"description": "A composite service that verifies the book locations."
+		},
+		{
+			"name": "Analytics SOAP Service",
+			"item": [
+				{
+					"name": "Books Statistics",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8",
+								"type": "text"
+							},
+							{
+								"key": "SOAPAction",
+								"value": "GetBooksStatistics",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:con=\"http://controllers.tcss559.uw.edu/\">\n    <x:Header/>\n    <x:Body>\n        <con:getBooksStatistics></con:getBooksStatistics>\n    </x:Body>\n</x:Envelope>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/soap/analytics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"soap",
+								"analytics"
+							]
+						},
+						"description": "Analyzes the total number of books and total cost of all the books."
+					},
+					"response": [
+						{
+							"name": "Books Statistics",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "SOAPAction",
+										"value": "GetBooksStatistics",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:con=\"http://controllers.tcss559.uw.edu/\">\n    <x:Header/>\n    <x:Body>\n        <con:getBooksStatistics></con:getBooksStatistics>\n    </x:Body>\n</x:Envelope>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/soap/analytics",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"soap",
+										"analytics"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml;charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 20:44:19 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "346"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version='1.0' encoding='UTF-8'?>\n<S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <S:Body>\n        <ns2:getBooksStatisticsResponse xmlns:ns2=\"http://controllers.tcss559.uw.edu/\">\n            <return>\n                <totalCostOfBooks>1108.0</totalCostOfBooks>\n                <totalNumberOfBooks>5</totalNumberOfBooks>\n            </return>\n        </ns2:getBooksStatisticsResponse>\n    </S:Body>\n</S:Envelope>"
+						}
+					]
+				},
+				{
+					"name": "Members Statistics",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8",
+								"type": "text"
+							},
+							{
+								"key": "SOAPAction",
+								"value": "GetMembersStatistics",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:con=\"http://controllers.tcss559.uw.edu/\">\n    <x:Header/>\n    <x:Body>\n        <con:getMembersStatistics></con:getMembersStatistics>\n    </x:Body>\n</x:Envelope>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/soap/analytics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"soap",
+								"analytics"
+							]
+						},
+						"description": "Analyzes the total number registered members, active members, reader members, librarian members and number of books issued till now."
+					},
+					"response": [
+						{
+							"name": "Members Statistics",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "SOAPAction",
+										"value": "GetMembersStatistics",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:con=\"http://controllers.tcss559.uw.edu/\">\n    <x:Header/>\n    <x:Body>\n        <con:getMembersStatistics></con:getMembersStatistics>\n    </x:Body>\n</x:Envelope>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/soap/analytics",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"soap",
+										"analytics"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml;charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Development/1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 20:45:15 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "541"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version='1.0' encoding='UTF-8'?>\n<S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <S:Body>\n        <ns2:getMembersStatisticsResponse xmlns:ns2=\"http://controllers.tcss559.uw.edu/\">\n            <return>\n                <totalNumberOfActiveMembers>5</totalNumberOfActiveMembers>\n                <totalNumberOfBooksIssued>3</totalNumberOfBooksIssued>\n                <totalNumberOfLibrarians>1</totalNumberOfLibrarians>\n                <totalNumberOfReaders>3</totalNumberOfReaders>\n                <totalNumberOfRegisteredMembers>5</totalNumberOfRegisteredMembers>\n            </return>\n        </ns2:getMembersStatisticsResponse>\n    </S:Body>\n</S:Envelope>"
+						}
+					]
+				}
+			],
+			"description": "A SOAP style service that analyzes the statistics of books and members."
+		}
+	]
+}
